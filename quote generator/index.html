@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Quote Generator</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3b39cc;
+  text-align: center;
+}
+
+.container {
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#quote {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+#author {
+  font-style: italic;
+  color: #666;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Random Quote Generator</h1>
+  <div id="quote"></div>
+  <div id="author"></div>
+  <button onclick="getNewQuote()">New Quote</button>
+</div>
+
+<script>
+const quotes = [
+  { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { quote: "Be the change that you wish to see in the world.", author: "Mahatma Gandhi" },
+  { quote: "The mind is everything. What you think you become.", author: "Buddha" },
+  { quote: "Strive not to be a success, but rather to be of value.", author: "Albert Einstein" },
+  { quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.", author: "Helen Keller" }
+];
+
+let currentQuote = 0;
+
+function getNewQuote() {
+  currentQuote = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").textContent = quotes[currentQuote].quote;
+  document.getElementById("author").textContent = "- " + quotes[currentQuote].author;
+}
+
+getNewQuote();
+</script>
+
+</body>
+</html>

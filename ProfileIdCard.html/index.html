@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>ID Card</title>
+  <!-- Include html2canvas library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <!-- ID Card and Form elements go here -->
+  <div id="id-card">
+    <div class="id-card material-ui-shadow">
+      <div class="id-card__mugshot">
+        <img src="http://www.travelcontinuously.com/wp-content/uploads/2018/04/empty-avatar.png" id="id-card-mugshot" alt="Mugshot">
+      </div>
+      <div class="id-card__logo logo">
+        <span class="logo__big">Microsoft</span>
+        <span class="logo__small">Azure</span>
+      </div>
+      <div class="id-card__subject-id"></div>
+      <div class="id-card__banner">
+        <span class="id-card__banner-text">EXPERIMENT S9.3a</span>
+      </div>
+      <div class="id-card__details">
+        <div class="id-card__detail">
+          <span class="id-card__detail-label">Name</span>
+          <span class="id-card__detail-value" id="id-card-name">Glip-Glop Woodenstein</span>
+        </div>
+        <div class="id-card__detail">
+          <span class="id-card__detail-label">Date of Birth</span>
+          <span class="id-card__detail-value" id="id-card-date-of-birth">09/20/1980</span>
+        </div>
+        <div class="id-card__detail">
+          <span class="id-card__detail-label">Issue Date</span>
+          <span class="id-card__detail-value">08/01/2018</span>
+        </div>
+        <div class="id-card__detail">
+          <span class="id-card__detail-label">Release Date</span>
+          <span class="id-card__detail-value">08/01/2020</span>
+        </div>
+      </div>
+      <div class="id-card__details id-card__details--short">
+        <div class="id-card__detail">
+          <span class="id-card__detail-label">Gender</span>
+          <span class="id-card__detail-value" id="id-card-gender">M</span>
+        </div>
+        <div class="id-card__detail">
+          <span class="id-card__detail-label">Height</span>
+          <span class="id-card__detail-value" id="id-card-height">6'03"</span>
+        </div>
+        <div class="id-card__detail">
+          <span class="id-card__detail-label">Weight</span>
+          <span class="id-card__detail-value" id="id-card-weight">145</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="id-form">
+    <div class="id-form">
+      <div class="id-form__row id-form__row--inline">
+        <div class="id-form__label">Name</div>
+        <div class="id-form__input">
+          <input type="text" id="name" placeholder="Name">
+        </div>
+      </div>
+      <div class="id-form__row id-form__row--inline">
+        <div class="id-form__label">Date of Birth</div>
+        <div class="id-form__input">
+          <input type="text" id="date-of-birth" placeholder="Date of Birth">
+        </div>
+      </div>
+      <div></div>
+      <div class="id-form__row id-form__row--inline">
+        <div class="id-form__label">Gender</div>
+        <div class="id-form__input">
+          <select id="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="id-form__row id-form__row--inline">
+        <div class="id-form__label">Height</div>
+        <div class="id-form__input">
+          <input type="text" id="height" placeholder="Height">
+        </div>
+      </div>
+      <div></div>
+      <div class="id-form__row id-form__row--inline">
+        <div class="id-form__label">Mugshot</div>
+        <div class="id-form__input">
+          <input type="file" id="mugshot" accept="image/*">
+        </div>
+      </div>
+      <div class="id-form__row id-form__row--inline">
+        <div class="id-form__label">Weight</div>
+        <div class="id-form__input">
+          <input type="text" id="weight" placeholder="Weight">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button id="download-button">Download</button>
+
+  <script src="main.js"></script>
+</body>
+</html>

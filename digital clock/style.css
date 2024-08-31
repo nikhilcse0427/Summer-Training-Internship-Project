@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.clock-container {
+  text-align: center;
+}
+
+.clock {
+  font-size: 5em;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#startButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#stopButton {
+  background-color: #f44336;
+  color: white;
+}
